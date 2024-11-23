@@ -1,0 +1,77 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.overlayContent {
+  background-color: #ffffff;
+  padding: rem-calc(30);
+  border-radius: rem-calc(20);
+  box-shadow: 0 rem-calc(4) rem-calc(10) rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: rem-calc(500);
+  width: 90%;
+  position: relative;
+
+  h2 {
+    font-size: rem-calc(25);
+    margin-bottom: rem-calc(20);
+  }
+
+  .editInput {
+    width: 100%;
+    padding: rem-calc(15);
+    font-size: rem-calc(16);
+    border: rem-calc(1) solid #ccc;
+    border-radius: rem-calc(25);
+    margin-bottom: rem-calc(20);
+    box-sizing: border-box;
+  }
+
+  .saveButton {
+    width: 100%;
+    padding: rem-calc(15);
+    font-size: rem-calc(16);
+    font-weight: bold;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: rem-calc(25);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+      background-color: #5a54e6;
+      transform: translateY(rem-calc(-2));
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  .closeIcon {
+    position: absolute;
+    top: rem-calc(10);
+    right: rem-calc(10);
+    font-size: rem-calc(24);
+    font-weight: bold;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}

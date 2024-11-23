@@ -1,0 +1,60 @@
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: rem-calc(800);
+  margin: auto;
+
+  .todoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem-calc(15);
+    margin-bottom: rem-calc(10);
+    background-color: #ffffff;
+    border: rem-calc(1) solid #e6e6e6;
+    border-radius: rem-calc(25);
+    box-shadow: 0 rem-calc(2) rem-calc(4) rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      transform: translateY(rem-calc(-2));
+      box-shadow: 0 rem-calc(4) rem-calc(6) rgba(0, 0, 0, 0.15);
+    }
+
+    h3 {
+      font-size: rem-calc(16);
+      font-weight: bold;
+      margin: 0;
+      flex: 1;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      &:hover {
+        color: #6c63ff;
+      }
+    }
+
+    input[type='checkbox'] {
+      width: rem-calc(20);
+      height: rem-calc(20);
+      margin-right: rem-calc(15);
+      accent-color: #6c63ff;
+    }
+
+    .deleteButton {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #000;
+      font-size: rem-calc(18);
+      transition: color 0.5s;
+
+      &:hover {
+        color: #ff4c4c;
+      }
+    }
+  }
+}

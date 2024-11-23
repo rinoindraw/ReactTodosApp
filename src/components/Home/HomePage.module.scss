@@ -1,0 +1,111 @@
+.container {
+  max-width: rem-calc(1200);
+  margin: 0 auto;
+  padding: rem-calc(20);
+}
+
+.title {
+  margin-top: rem-calc(80);
+  font-size: rem-calc(40);
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+
+  @media (max-width: 768px) {
+    font-size: rem-calc(30);
+  }
+}
+
+.subtitle {
+  font-size: rem-calc(22);
+  margin-top: rem-calc(30);
+  text-align: center;
+  color: #777;
+  margin-bottom: rem-calc(40);
+}
+
+.todoWrapper {
+  max-height: rem-calc(600);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: rem-calc(30);
+  background-color: #ffffff;
+  border-radius: rem-calc(20);
+  margin: rem-calc(20) auto;
+  max-width: rem-calc(800);
+  box-shadow: 0 rem-calc(4) rem-calc(10) rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, box-shadow 0.3s;
+
+  &::-webkit-scrollbar {
+    width: rem-calc(8);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #6c63ff;
+    border-radius: rem-calc(4);
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #5a54e6;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  .loaderWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .circularLoader {
+    width: rem-calc(50);
+    height: rem-calc(50);
+    border: rem-calc(5) solid rgba(0, 0, 0, 0.1);
+    border-top: rem-calc(5) solid #6c63ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .todoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem-calc(20);
+    background-color: #f9f9f9;
+    border-radius: rem-calc(15);
+    margin-bottom: rem-calc(15);
+    box-shadow: 0 rem-calc(2) rem-calc(6) rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      box-shadow: 0 rem-calc(4) rem-calc(10) rgba(0, 0, 0, 0.2);
+    }
+
+    .deleteButton {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      color: #ff4d4d;
+      font-size: rem-calc(19);
+      transition: color 0.3s;
+
+      &:hover {
+        color: #e60000;
+      }
+    }
+  }
+
+  .noMoreTodos {
+    text-align: center;
+    font-size: rem-calc(19);
+    color: #777;
+  }
+}
